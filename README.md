@@ -26,7 +26,7 @@ This is the **frontend** of the Project One app – a clean and responsive UI bu
 ### ⚙️ Architecture
 
 * NavHost and NavController for navigation
-* Uses `AnimatedContent` for smooth screen transitions
+  
 * App screens are built using **dynamic common layout** with:
 
   * Title
