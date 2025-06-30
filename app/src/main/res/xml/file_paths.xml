@@ -3,7 +3,7 @@
 
     <!-- Match Download/zebite (all media) -->
     <external-path
-        name="zebite_downloads"
-        path="Download/zebite" />
+        name="Project One_downloads"
+        path="Download/Project One" />
 
 </paths>

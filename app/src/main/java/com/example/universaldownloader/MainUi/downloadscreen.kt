@@ -101,7 +101,6 @@ fun DownloadedFilesList(onFileClick: (File) -> Unit,modifier: Modifier) {
                             maxLines = 2,
                             fontFamily = FontFamily(Font(R.font.poppinslight)),
                             modifier = Modifier
-                                .fillMaxWidth()
                                 .padding(16.dp)
                         )
                     }

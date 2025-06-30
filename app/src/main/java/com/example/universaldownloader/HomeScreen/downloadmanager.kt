@@ -14,7 +14,7 @@ fun downloadMergedVideoFromBackend(context: Context, filename: String) {
             .setTitle(filename)
             .setDescription("Downloading merged video...")
             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-            .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "zebite/$filename")
+            .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "Project One/$filename")
             .setAllowedOverMetered(true)
             .setAllowedOverRoaming(true)
 
@@ -32,12 +32,12 @@ fun downloadMergedVideoFromBackend(context: Context, filename: String) {
 fun downloadAudioToPhone(context: Context, filename: String) {
     try{
         val request = DownloadManager.Request(
-            Uri.parse("http://192.168.75.197:8000/audio/file?filename=$filename")
+            Uri.parse("http://192.168.75.197:8000/audio/file?filename=$filename")  // Adjust IP if needed
         )
             .setTitle(filename)
             .setDescription("Downloading audio")
             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-            .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "zebite/$filename")
+            .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "Project One/$filename")
             .setAllowedOverMetered(true)
             .setAllowedOverRoaming(true)
 
@@ -53,7 +53,7 @@ fun downloadAudioToPhone(context: Context, filename: String) {
 }
 
 fun getDownloadedFiles(): List<File> {
-    val folder = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "zebite/")
+    val folder = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "Project One/")
     return folder.listFiles()?.filter { it.isFile }?.toList() ?: emptyList()
 }
 
